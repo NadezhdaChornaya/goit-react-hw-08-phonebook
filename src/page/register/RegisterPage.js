@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState } from 'react'
+
 
 const RegisterPage = () => {
     const [state, setState] = useState({
-        name: '',
         email: '',
         password: '',
     })
 
-    const handleChange = (({ value, name }) => {
-        setState({ [name]: value })
+    const handleChange = ((e) => {
+        const { name, value } = e.target.value;
+        setState(prevState => ({ ...prevState, [name]: value }))
     })
 
     const handleSubmit = (e) => {
@@ -44,6 +44,7 @@ const RegisterPage = () => {
                         onChange={handleChange}
                         placeholder='Enter your password' />
                 </label>
+                <button type="submit">SignUp</button>
             </form>
         </div>
     )

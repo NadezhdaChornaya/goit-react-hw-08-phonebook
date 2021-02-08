@@ -7,8 +7,9 @@ const LoginPage = () => {
         password: '',
     })
 
-    const handleChange = (({ value, name }) => {
-        setState({ [name]: value })
+    const handleChange = ((e) => {
+        const { name, value } = e.target.value;
+        setState(prevState => ({ ...prevState, [name]: value }))
     })
 
     const handleSubmit = (e) => {
@@ -34,6 +35,7 @@ const LoginPage = () => {
                         onChange={handleChange}
                         placeholder='Enter password' />
                 </label>
+                <button type="submit">SignIn</button>
             </form>
         </div>
     )

@@ -1,23 +1,23 @@
-import React from 'react';
-// import { CSSTransition } from 'react-transition-group';
-// import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
-import ContactsPage from '../page/contacts/ContactsPage';
-import RegisterPage from '../page/register/RegisterPage'
-import LoginPage from '../page/login/LoginPage'
+import React, { Suspense } from 'react';
+import { contactsRoutes } from '../routes'
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Layout from './header/Layout';
 
-// import ContactForm from './contactForm/ContactForm';
-// import ContactList from './contactList/ContactList';
-// import Filter from './filter/Filter';
-// import { PhonebookWrapper } from './styledApp';
 
 
 const App = () => {
     return (
         <>
-            <Route path='/register' component={RegisterPage}></Route>
-            <Route path='/login' component={LoginPage}></Route>
-            <Route path='/contacts' component={ContactsPage}></Route>
+            <Layout>
+                <Suspense fallback=''>
+                    <Switch>
+                        {contactsRoutes.map(route => (
+                            <Route key={route.path} {...route} />
+                        ))}
+                        <Redirect to="/" />
+                    </Switch>
+                </Suspense>
+            </Layout>
             {/* <PhonebookWrapper>
                 <CSSTransition
                     in={true}
@@ -57,3 +57,9 @@ const App = () => {
 export default App
 
 
+// import { CSSTransition } from 'react-transition-group';
+// import { connect } from 'react-redux';
+// import ContactForm from './contactForm/ContactForm';
+// import ContactList from './contactList/ContactList';
+// import Filter from './filter/Filter';
+// import { PhonebookWrapper } from './styledApp';
