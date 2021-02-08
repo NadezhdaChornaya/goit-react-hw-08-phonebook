@@ -4,7 +4,7 @@ import { addContactActionCreator, deleteContactActionCreator, setLoading, setErr
 export const addNewContactOperation = (contact) => (dispatch) => {
     dispatch(setLoading())
     axios.post(
-        `${process.env.REACT_APP_BASE_URL}`,
+        `${process.env.REACT_APP_BASE_URL}/contacts.json`,
         contact
     )
         .then(response => dispatch(addContactActionCreator({ ...contact, id: response.data.name })))
