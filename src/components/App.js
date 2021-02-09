@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { contactsRoutes } from '../routes'
 import { Switch, Route, Redirect } from 'react-router-dom';
+
 import Layout from './header/Layout';
 
 
@@ -8,6 +9,7 @@ import Layout from './header/Layout';
 const App = () => {
     return (
         <>
+
             <Layout>
                 <Suspense fallback=''>
                     <Switch>
@@ -18,6 +20,7 @@ const App = () => {
                     </Switch>
                 </Suspense>
             </Layout>
+
             {/* <PhonebookWrapper>
                 <CSSTransition
                     in={true}
