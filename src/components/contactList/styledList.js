@@ -23,20 +23,20 @@ export const Div = styled.div`
 
 }
 .button{
-   width: 25%;
+   min-width: 80px;
    padding: 5px 10px; 
-   	
    font-size: 20px;
-   text-shadow: 1px 1px 2px #2F4F4F, 0 0 1em #808080;
-
-   border-radius: 5px;
+   border-radius: 50px;
+   border-color: #eeedfa;
+   text-shadow: 1px 1px 2px #2F4F4F, 0 0 1em #d98729;
    border-color: #eeedfa;
 
    background-color:#eeedfa;
    cursor: pointer;
    
    &:hover {
-       background-color:#3CB371;
-       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);}
+     color:#fff;
+       background-color:#d98729;
+       /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);} */
 
 `

@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from "react-redux";
 import { useLocation } from 'react-router-dom';
 import { singUpOperation, singInOperation } from '../../redux/operations/authOperanions';
 import { DIV } from './styledAuth';
+
 
 const initialState = {
     email: '',
@@ -15,7 +16,6 @@ const Authorization = () => {
     const [state, setState] = useState({ ...initialState });
 
     const handleChange = (e) => {
-        console.log(e.target.value)
         const { name, value } = e.target;
         setState(prevState => ({ ...prevState, [name]: value }))
     }
@@ -28,26 +28,28 @@ const Authorization = () => {
 
     return (
         <DIV>
-            <h1 className="TitleAuth">Register page</h1>
-            <form onSubmit={handleSubmit}>
+            <h1 className="mainTitle">{location.pathname === '/register' ? 'Register page' : 'Login page'}</h1>
+            <form onSubmit={handleSubmit} className='formAuth wrapper'>
 
-                <label>
+                <label className='labelAuth'>
                     Email
                 <input type='email'
                         name='email'
                         value={state.email}
                         onChange={handleChange}
-                        placeholder='Enter your email' />
+                        placeholder='Enter your email'
+                        className='inputAuth' />
                 </label>
-                <label>
+                <label className='labelAuth'>
                     Password
                 <input type='password'
                         name='password'
                         value={state.password}
                         onChange={handleChange}
-                        placeholder='Enter your password' />
+                        placeholder='Enter your password'
+                        className='inputAuth' />
                 </label>
-                <button type="submit">{location.pathname === '/register' ? 'SignUp' : 'SignIn'}</button>
+                <button type="submit" className='buttonAuth'>{location.pathname === '/register' ? 'SignUp' : 'SignIn'}</button>
             </form>
         </DIV>
     )
