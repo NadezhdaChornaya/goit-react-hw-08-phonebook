@@ -9,6 +9,8 @@ export const contactsRoutes = [
         component: lazy(() =>
             import("./page/home/HomePage")
         ),
+        isPrivate: false,
+        restricted: false,
     },
     {
         path: "/register",
@@ -17,6 +19,8 @@ export const contactsRoutes = [
         component: lazy(() =>
             import("./page/register/RegisterPage")
         ),
+        isPrivate: false,
+        restricted: true,
     },
     {
         path: "/login",
@@ -25,6 +29,8 @@ export const contactsRoutes = [
         component: lazy(() =>
             import("./page/login/LoginPage")
         ),
+        isPrivate: false,
+        restricted: true,
     },
     {
         path: "/contacts",
@@ -33,5 +39,7 @@ export const contactsRoutes = [
         component: lazy(() =>
             import("./page/contacts/ContactsPage")
         ),
+        isPrivate: true,
+        restricted: false,
     },
 ];

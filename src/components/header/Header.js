@@ -1,14 +1,15 @@
 import React from 'react';
 import Navigation from '../navigation/Navigation';
 import UserMenu from '../userMenu/UserMenu';
+import { Div } from './styledHeader';
 
 
 const Header = () => {
     return (
-        <div>
+        <Div>
             <Navigation />
             <UserMenu />
-        </div>
+        </Div>
     )
 }
 

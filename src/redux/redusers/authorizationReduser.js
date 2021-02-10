@@ -5,6 +5,7 @@ const initialState = {
     idToken: '',
     refreshToken: '',
     error: '',
+    localId: '',
     isLoading: false,
     isAuth: false,
 }
