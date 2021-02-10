@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { useLocation } from 'react-router-dom';
 import { singUpOperation, singInOperation } from '../../redux/operations/authOperanions';
+import { DIV } from './styledAuth';
 
 const initialState = {
     email: '',
@@ -26,17 +27,10 @@ const Authorization = () => {
     }
 
     return (
-        <div>
-            <h1>Register page</h1>
+        <DIV>
+            <h1 className="TitleAuth">Register page</h1>
             <form onSubmit={handleSubmit}>
-                {/* <label>
-                    Name
-                <input type='text'
-                        name='name'
-                        value={state.name}
-                        onChange={handleChange}
-                        placeholder='Enter your name' />
-                </label> */}
+
                 <label>
                     Email
                 <input type='email'
@@ -55,7 +49,7 @@ const Authorization = () => {
                 </label>
                 <button type="submit">{location.pathname === '/register' ? 'SignUp' : 'SignIn'}</button>
             </form>
-        </div>
+        </DIV>
     )
 }
 

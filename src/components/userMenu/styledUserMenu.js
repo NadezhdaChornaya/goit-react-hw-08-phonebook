@@ -7,7 +7,7 @@ align-items:center;
     margin-left:10px;
     font-weight: 500;
 font-size:20px;
-color:#fff;
+color:#d98729; 
 }
 .ButtonNav{
      margin-left: 10px;

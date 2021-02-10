@@ -1,13 +1,15 @@
 import React, { Suspense } from 'react';
 import { contactsRoutes } from '../routes'
-import { Switch, Route, Redirect } from 'react-router-dom';
-
+import { Switch, Redirect } from 'react-router-dom';
+import { useSelector } from "react-redux";
 import Layout from './header/Layout';
+import PublicRoute from './routes/PublicRoute';
+import PrivateRoute from './routes/PrivetRoute';
 
 
 
 const App = () => {
-
+    const isAuth = useSelector((state) => state.auth.isAuth);
     return (
         <>
 
@@ -15,7 +17,11 @@ const App = () => {
                 <Suspense fallback=''>
                     <Switch>
                         {contactsRoutes.map(route => (
-                            <Route key={route.path} {...route} />
+                            !route.isPrivate ?
+                                < PublicRoute key={route.path} isAuth={isAuth} {...route} />
+                                : <PrivateRoute key={route.path} isAuth={isAuth} {...route} />
+
+
                         ))}
                         <Redirect to="/" />
                     </Switch>

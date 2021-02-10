@@ -17,7 +17,7 @@ const UserMenu = () => {
         <>
             {isAuth && (<DIV>
                 <img src={avatar} alt='avatar' width='32' />
-                <p className="TitleNav">Welcome,{email}</p>
+                <p className="TitleNav">Hi, {email} </p>
                 <button type="button" className="ButtonNav" onClick={handleLogout}>Logout</button>
             </DIV>)}
         </>
