@@ -1,4 +1,5 @@
 import axios from "axios";
+import { REACT_APP_BASE_URL } from '../dataBackEnd'
 import { addContactActionCreator, deleteContactActionCreator, setLoading, setError } from '../actions/contactsActions';
 
 export const addNewContactOperation = (contact) => (dispatch, getState) => {
@@ -6,7 +7,7 @@ export const addNewContactOperation = (contact) => (dispatch, getState) => {
     const localId = getState().auth.localId;
     dispatch(setLoading())
     axios.post(
-        `${process.env.REACT_APP_BASE_URL}/contacts/${localId}.json?auth=${idToken}`,
+        `${REACT_APP_BASE_URL}/contacts/${localId}.json?auth=${idToken}`,
         contact
     )
         .then(response => dispatch(addContactActionCreator({ ...contact, id: response.data.name })))
@@ -20,7 +21,7 @@ export const deleteContactOperation = (id) => (dispatch, getState) => {
     const idToken = getState().auth.idToken;
     const localId = getState().auth.localId;
     dispatch(setLoading());
-    axios.delete(`${process.env.REACT_APP_BASE_URL}/contacts/${localId}/${id}.json?auth=${idToken}`)
+    axios.delete(`${REACT_APP_BASE_URL}/contacts/${localId}/${id}.json?auth=${idToken}`)
         .then(response => dispatch(deleteContactActionCreator(id)))
         .catch(error => dispatch(setError(error)))
         .finally(dispatch(setLoading()))

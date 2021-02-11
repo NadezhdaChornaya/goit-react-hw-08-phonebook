@@ -4,14 +4,14 @@ import storage from "redux-persist/lib/storage";
 import contactsReducer from './contactsReducer';
 import authReducer from './authorizationReduser';
 
-const authPersist = {
+const authPersistConfig = {
     key: "auth",
     storage,
     whitelist: ["email", "idToken", "refreshToken", "isAuth", "localId"],
 };
 
 const rootReducer = combineReducers({
-    auth: persistReducer(authPersist, authReducer),
+    auth: persistReducer(authPersistConfig, authReducer),
     contacts: contactsReducer,
 })
 

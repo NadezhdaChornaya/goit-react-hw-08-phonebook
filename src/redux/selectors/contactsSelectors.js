@@ -9,13 +9,7 @@ const getFilterSelector = createSelector([getContactsSelector, getFilterValueSel
     return contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()))
 })
 
-// const getFilterSelector = state => {
-//     const items = getContactsSelector(state)
-//     const filterValue = getFilterValueSelector(state)
-//     items.filter(item => item.name.toLowerCase()
-//         .includes(filterValue.toLowerCase()))
-// };
-
+// eslint-disable-next-line
 export default {
     getContactsSelector,
     getTextAlertSelector,
@@ -23,4 +17,13 @@ export default {
     getFilterSelector,
     getFilterValueSelector,
 };
+
+
+// const getFilterSelector = state => {
+//     const items = getContactsSelector(state)
+//     const filterValue = getFilterValueSelector(state)
+//     items.filter(item => item.name.toLowerCase()
+//         .includes(filterValue.toLowerCase()))
+// };
+
 

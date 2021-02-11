@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { useLocation } from 'react-router-dom';
 import { singUpOperation, singInOperation } from '../../redux/operations/authOperanions';

@@ -1,4 +1,4 @@
-import { singUp, singIn, singOut, setLoading, setError, alertActionAuth } from "../actions/authorizationActions";
+import { singUp, singIn, singOut, setLoading, setError } from "../actions/authorizationActions";
 
 const initialState = {
     email: '',
@@ -37,8 +37,8 @@ const authReducer = (state = { ...initialState }, { type, payload }) => {
             return { ...state, isLoading: !state.isLoading };
         case setError.type:
             return { ...state, error: payload };
-        case alertActionAuth.type:
-            return { ...state, text: payload, };
+        // case alertActionAuth.type:
+        //     return { ...state, text: payload, };
 
         default:
             return state;
