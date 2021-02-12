@@ -19,13 +19,15 @@ const Layout = ({ children }) => {
         <div>
             <ThemeProvider theme={theme}>
                 <GlobalStyle />
+
                 <Header />
                 <DIV>
-                    <input type='checkbox' className='inputSwitcher' onChange={toggleTheme} />
+                    <input type='checkbox' checked={theme.title === 'dark'} className='inputSwitcher' onChange={toggleTheme} />
                 </DIV>
                 {children}
             </ThemeProvider>
         </div>
+
     )
 }
 

@@ -8,13 +8,16 @@ import PrivateRoute from './routes/PrivetRoute';
 
 
 
+
+
 const App = () => {
     const isAuth = useSelector((state) => state.auth.isAuth);
+
 
     return (
         <>
 
-            <Layout>
+            <Layout >
                 <Suspense fallback=''>
                     <Switch>
                         {contactsRoutes.map(route => (
@@ -28,6 +31,7 @@ const App = () => {
                     </Switch>
                 </Suspense>
             </Layout>
+
         </>
     )
 }

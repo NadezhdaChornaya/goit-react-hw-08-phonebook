@@ -6,7 +6,6 @@ export const DIV = styled.div`
      margin-bottom:20px;  
     font-size: 40px;
 text-align: center;
-/* color:#3b2dd6; */
 text-shadow: 1px 1px 2px #2F4F4F, 0 0 1em #808080;
 }
 .img{
@@ -19,7 +18,7 @@ text-shadow: 1px 1px 2px #2F4F4F, 0 0 1em #808080;
     text-align:center;
     text-shadow: 1px 1px 2px #2F4F4F, 0 0 1em #808080;
 }
-.link{
+.linkHome{
     display: block;
     margin:0 auto;
     width: 200px;
@@ -27,17 +26,15 @@ text-shadow: 1px 1px 2px #2F4F4F, 0 0 1em #808080;
     padding: 5px;
     text-align:center;
     list-style-type: none;
-    border: 1px solid #331bcf;
+    border-style:solid;
+    border-width: 1px;
     border-radius: 50px;
-    color:#331bcf;
     text-shadow: 1px 1px 2px #2F4F4F, 0 0 1em #d98729;
     background-color:#eeedfa;
     text-align:center;
     text-decoration:none;
     font-weight: 500;
     font-size:20px;
-
-
 cursor:pointer;
   &:hover,&:focus{
       color:#d98729; 

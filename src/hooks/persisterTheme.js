@@ -1,15 +1,13 @@
 import { useState, useEffect } from 'react';
 
-// const light = { color: "white" };
-// const dark = { color: "black" };
-// key = "theme";
+
 
 const usePersisterThemeHook = (key, initialState) => {
     const [state, setState] = useState(() => {
         const storageValue = localStorage.getItem('theme')
         if (storageValue) {
             return JSON.parse(storageValue)
-        } else return {}
+        } else return initialState
     })
 
     useEffect(() => {

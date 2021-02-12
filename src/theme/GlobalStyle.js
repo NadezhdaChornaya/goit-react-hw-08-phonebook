@@ -58,7 +58,10 @@ h1,h2,h3{
 		 color: ${props => props.theme.colors.userName};
 		 border-color: ${props => props.theme.colors.userName};
 }}
-
+.linkHome{
+	color: ${props => props.theme.colors.textHome};
+	border-color:${props => props.theme.colors.textHome};
+}
 `
 
 export default GlobalStyle

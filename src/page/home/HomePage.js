@@ -5,7 +5,6 @@ import { DIV } from './styledHomePage';
 
 const HomePage = () => {
     const isAuth = useSelector(state => state.auth.isAuth)
-    // const img = 'https://icon-library.net//images/phone-contacts-icon/phone-contacts-icon-18.jpg'
     const img = 'https://cdn.pixabay.com/photo/2021/01/24/10/23/ashutosh-kaushik-5944749_1280.jpg'
 
     return (
@@ -15,14 +14,14 @@ const HomePage = () => {
             {!isAuth && (<div className="wrapper" >
                 <div className="regWrapper">
                     <p className="text">Don't have an account?</p>
-                    <Link className="link" to="/register">
+                    <Link className="linkHome" to="/register">
                         Pleace, sign up
                 </Link>
 
                 </div>
                 <div className="regWrapper">
                     <p className="text">Do you have an account? </p>
-                    <Link className="link" to="/register">
+                    <Link className="linkHome" to="/register">
                         Please, sign in
                 </Link>
 
