@@ -10,7 +10,6 @@ export const Div = styled.div`
     justify-content: space-between;
     padding: 5px 10px;
     font-size: 20px;
-    background-color:#ffffff;
     text-shadow: 1px 1px 2px #2F4F4F, 0 0 1em #808080;
     border: 1px solid #afaeb0;
     border-radius: 5px;
@@ -37,6 +36,6 @@ export const Div = styled.div`
    &:hover {
      color:#fff;
        background-color:#d98729;
-       /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);} */
+   }
 
 `

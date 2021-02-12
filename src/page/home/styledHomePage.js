@@ -6,7 +6,7 @@ export const DIV = styled.div`
      margin-bottom:20px;  
     font-size: 40px;
 text-align: center;
-color:#3b2dd6;
+/* color:#3b2dd6; */
 text-shadow: 1px 1px 2px #2F4F4F, 0 0 1em #808080;
 }
 .img{

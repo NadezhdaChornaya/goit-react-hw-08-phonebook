@@ -7,7 +7,6 @@ align-items:center;
     margin-left:10px;
     font-weight: 500;
 font-size:20px;
-color:#d98729; 
 }
 .ButtonNav{
      margin-left: 10px;
@@ -19,10 +18,6 @@ color:#d98729;
   font-weight: 500;
 font-size:20px;
 color:#fff;
-background-color:#2c29d9;
 cursor:pointer;
-  &:hover,&:focus{
-      color:#d98729; 
-      border: 1px solid #d98729;
 }
 `

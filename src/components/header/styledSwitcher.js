@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const DIV = styled.div`
+margin-top: 20px;
+margin-left: 92%;
 .inputSwitcher{
     position:relative;
-    width:70px;
-    height:30px;
+    width:80px;
+    height:40px;
     -webkit-appearance:none;
     outline:none;
     background:#c6c6c6;
@@ -17,8 +19,8 @@ export const DIV = styled.div`
     &:before{
         content:'';
 position:absolute;
-width:30px;
-height:30px;
+width:40px;
+height:40px;
 border-radius:20px;
 top:0;
 left:0;

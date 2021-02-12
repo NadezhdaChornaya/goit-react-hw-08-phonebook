@@ -13,11 +13,13 @@ const light = {
 
 
         primary: "#ffffff",
-        secondary: "#dbd7d8",
+        secondary: "#ebebed",
         background: "#ffffff",
-        text: "#5a5a5a",
+        text: "#363537",
         main: "#819ff5",
         buttonText: "#dbd7d8",
+        title: "#3b2dd6",
+        userName: "#2c29d9"
     },
 };
 

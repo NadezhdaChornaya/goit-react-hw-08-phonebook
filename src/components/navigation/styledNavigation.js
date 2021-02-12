@@ -11,10 +11,6 @@ display:flex;
     border: 1px solid #fff;
     border-radius: 50px;
   text-align:center;
-  &:hover,&:focus{
-      color:#d98729; 
-      border: 1px solid #d98729;
-  }
 }
 .navigation-link{
 text-decoration:none;
@@ -23,11 +19,10 @@ font-size:20px;
 color:#fff;
 cursor:pointer;
 }
-&:hover,&:focus{
-   color:#d98729; 
-}
+
 .navigation-link-active{
-    color:#d98729;
+    font-weight: 700;
+    color:#fc9803;
     
 }
 
