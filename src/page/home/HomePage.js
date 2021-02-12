@@ -5,7 +5,8 @@ import { DIV } from './styledHomePage';
 
 const HomePage = () => {
     const isAuth = useSelector(state => state.auth.isAuth)
-    const img = 'https://icon-library.net//images/phone-contacts-icon/phone-contacts-icon-18.jpg'
+    // const img = 'https://icon-library.net//images/phone-contacts-icon/phone-contacts-icon-18.jpg'
+    const img = 'https://cdn.pixabay.com/photo/2021/01/24/10/23/ashutosh-kaushik-5944749_1280.jpg'
 
     return (
         <DIV>
